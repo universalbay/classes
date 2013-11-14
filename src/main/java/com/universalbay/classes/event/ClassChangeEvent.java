@@ -31,6 +31,12 @@ public class ClassChangeEvent extends Event implements Cancellable {
         return this.entity;
     }
 
+    /**
+     * Returns the newly assigned {@link CharacterClass}. If you're looking for the {@code CharacterClass} currently
+     * assigned to the {@link HumanEntity}, use {@link ClassManager#getAssignedClass(HumanEntity)}.
+     *
+     * @return  the {@code HumanEntity} whose {@code CharacterClass} was subject to change
+     */
     public final CharacterClass getNewClass() {
         return this.newClass;
     }
