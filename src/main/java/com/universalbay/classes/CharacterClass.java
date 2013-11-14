@@ -13,6 +13,11 @@ public interface CharacterClass {
      */
     String getName();
 
+    /**
+     * Gets the icon of this {@code CharacterClass}.
+     *
+     * @return  the icon of this {@code CharacterClass} in the form of an {@link ItemStack}
+     */
     ItemStack getIcon();
 
     ItemStack[] getInventoryContents();
