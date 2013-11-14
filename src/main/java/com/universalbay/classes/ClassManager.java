@@ -10,6 +10,9 @@ import com.universalbay.classes.event.ClassChangeEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.HumanEntity;
 
+/**
+ * Keeps track of {@link CharacterClass CharacterClasses} associated with {@link HumanEntity HumanEntities}.
+ */
 public class ClassManager { // TODO: Persistent storage of classes
     private List<CharacterClass> availableClasses;
     private Map<HumanEntity, CharacterClass> assignedClasses;
