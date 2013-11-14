@@ -41,6 +41,11 @@ public class ClassChangeEvent extends Event implements Cancellable {
         return this.newClass;
     }
 
+    /**
+     * Sets the {@link CharacterClass} to assign to the {@link HumanEntity}.
+     *
+     * @param   newClass    the new {@code CharacterClass} to assign the {@code HumanEntity}
+     */
     public final void setNewClass(final CharacterClass newClass) {
         this.newClass = newClass;
     }
