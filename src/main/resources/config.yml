@@ -1,0 +1,40 @@
+classSelection:
+  selectionWand:
+    ==: org.bukkit.inventory.ItemStack
+    type: BLAZE_ROD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: Rod of Dissociative Personalities
+      lore:
+      - Use this to select a class
+classes:
+  Knight:
+    itemIcon:
+      ==: org.bukkit.inventory.ItemStack
+      type: IRON_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: Knight
+        lore:
+        - Swords, and stuff.
+    items:
+    - ==: org.bukkit.inventory.ItemStack
+      type: IRON_SWORD
+  Archer:
+    itemIcon:
+      ==: org.bukkit.inventory.ItemStack
+      type: BOW
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: Archer
+        lore:
+        - Archers are pretty cool. Bow and arrow and doesn't afraid of anything
+    items:
+    - ==: org.bukkit.inventory.ItemStack
+      type: BOW
+    - ==: org.bukkit.inventory.ItemStack
+      type: ARROW
+      amount: 64
