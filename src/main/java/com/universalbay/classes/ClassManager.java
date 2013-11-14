@@ -40,6 +40,11 @@ public class ClassManager { // TODO: Persistent storage of classes
         this.assignedClasses = new HashMap(initialCharacterCapacity);
     }
 
+    /**
+     * Gets a {@link List} of all currently available {@link CharacterClass CharacterClasses}.
+     *
+     * @return  a {@code List} of all available {@code CharacterClasses}
+     */
     public final List<CharacterClass> getAvailableClasses() {
         return availableClasses;
     }
