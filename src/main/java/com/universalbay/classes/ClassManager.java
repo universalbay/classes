@@ -68,6 +68,15 @@ public class ClassManager { // TODO: Persistent storage of classes
         return this.assignedClasses.get(entity);
     }
 
+    /**
+     * Assigns a {@link CharacterClass} to the specified {@link HumanEntity} and calls the appropriate events. A
+     * {@link ClassChangeEvent} is called, and if cancelled, it'll simply return and do nothing. There is no way to
+     * know if the event was cancelled or not other than listening with the lowest possible priority, however this
+     * shouldn't be necessary as it can be verified with {@link #getAssignedClass(HumanEntity)}.
+     *
+     * @param   entity          the {@code HumanEntity} this {@code CharacterClass} is assigned to
+     * @param   characterClass  the {@code CharacterClass} to assign
+     */
     public final void assignClass(final HumanEntity entity, final CharacterClass characterClass) {
         ClassChangeEvent event = new ClassChangeEvent(entity, characterClass);
         Bukkit.getServer().getPluginManager().callEvent(event);
