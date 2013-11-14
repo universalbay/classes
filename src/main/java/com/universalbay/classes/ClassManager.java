@@ -58,6 +58,12 @@ public class ClassManager { // TODO: Persistent storage of classes
         return new HashMap(this.assignedClasses);
     }
 
+    /**
+     * Gets the {@link CharacterClass} assigned to a {@link HumanEntity}.
+     *
+     * @param   entity  the {@code HumanEntity} to get the assigned {@code CharacterClass} from
+     * @return          the assigned {@code CharacterClass}
+     */
     public final CharacterClass getAssignedClass(final HumanEntity entity) {
         return this.assignedClasses.get(entity);
     }
