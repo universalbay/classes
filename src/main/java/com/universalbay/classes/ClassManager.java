@@ -49,6 +49,11 @@ public class ClassManager { // TODO: Persistent storage of classes
         return availableClasses;
     }
 
+    /**
+     * Gets a {@link Map} of all the assigned {@link CharacterClass CharacterClasses} and who they're assigned to.
+     *
+     * @return  a {@code Map} mapping {@link HumanEntity HumanEntities} to a specific {@link CharacterClass}
+     */
     public final Map<HumanEntity, CharacterClass> getAssignedClasses() {
         return new HashMap(this.assignedClasses);
     }
