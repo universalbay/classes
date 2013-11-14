@@ -22,6 +22,11 @@ public class ClassChangeEvent extends Event implements Cancellable {
         this.newClass = newClass;
     }
 
+    /**
+     * Returns the {@link HumanEntity} whose {@link CharacterClass} was subject to change.
+     *
+     * @return  the {@code HumanEntity} whose {@code CharacterClass} was subject to change
+     */
     public final HumanEntity getWho() {
         return this.entity;
     }
