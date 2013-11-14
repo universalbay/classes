@@ -17,6 +17,12 @@ public class ClassChangeEvent extends Event implements Cancellable {
     private CharacterClass newClass;
     private boolean cancelled;
 
+    /**
+     * Constructs a {@code ClassChangeEvent}.
+     *
+     * @param   entity      the {@link HumanEntity} whose {@link CharacterClass} is to be changed
+     * @param   newClass    the {@code CharacterClass} to change to
+     */
     public ClassChangeEvent(final HumanEntity entity, final CharacterClass newClass) {
         this.entity = entity;
         this.newClass = newClass;
