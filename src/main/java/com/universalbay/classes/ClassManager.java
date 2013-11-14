@@ -18,6 +18,12 @@ public class ClassManager { // TODO: Persistent storage of classes
         this(16, Bukkit.getMaxPlayers());
     }
 
+    /**
+     * Constructs a {@code ClassManager} with an initial capacity for the {@link #assignedClasses} {@link Map}.
+     * The initial capacity of the {@link #availableClasses} {@link List} is 16.
+     *
+     * @param   initialCharacterCapacity    the initial capacity of the {@code assignedClasses} {@code Map}
+     */
     public ClassManager(final int initialCharacterCapacity) {
         this(16, initialCharacterCapacity);
     }
