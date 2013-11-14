@@ -28,6 +28,13 @@ public class ClassManager { // TODO: Persistent storage of classes
         this(16, initialCharacterCapacity);
     }
 
+    /**
+     * Constructs a {@code ClassManager} with an initial capacity for the {@link #availableClasses} {@link List} and
+     * the {@link #assignedClasses} {@link Map}.
+     *
+     * @param   initialClassesCapacity      the initial capacity of the {@code availableClasses} {@code List}
+     * @param   initialCharacterCapacity    the initial capacity of the {@code assignedClasses} {@code Map}
+     */
     public ClassManager(final int initialClassesCapacity, final int initialCharacterCapacity) {
         this.availableClasses = new ArrayList();
         this.assignedClasses = new HashMap(initialCharacterCapacity);
