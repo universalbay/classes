@@ -17,6 +17,11 @@ public class ClassManager { // TODO: Persistent storage of classes
     private List<CharacterClass> availableClasses;
     private Map<HumanEntity, CharacterClass> assignedClasses;
 
+    /**
+     * Constructs a {@code ClassManager}.
+     * The initial capacity of the {@link #availableClasses} {@link List} is 16 and {@link Bukkit#getMaxPlayers()} for
+     * the {@link #assignedClasses} {@link Map}.
+     */
     public ClassManager() {
         this(16, Bukkit.getMaxPlayers());
     }
