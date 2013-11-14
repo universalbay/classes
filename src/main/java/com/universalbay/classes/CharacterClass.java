@@ -20,5 +20,12 @@ public interface CharacterClass {
      */
     ItemStack getIcon();
 
+    /**
+     * Gets the starter/default inventory contents associated with this {@code CharacterClass}, in the
+     * form of an {@link ItemStack} array. A {@link HumanEntity}'s inventory will be filled with the
+     * contents of this array on picking this specific {@code CharacterClass}.
+     *
+     * @return  the default inventory contents of this {@code CharacterClass}
+     */
     ItemStack[] getInventoryContents();
 }
