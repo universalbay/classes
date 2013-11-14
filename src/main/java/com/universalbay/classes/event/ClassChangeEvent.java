@@ -7,6 +7,10 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.Cancellable;
 import org.bukkit.entity.HumanEntity;
 
+/**
+ * Called when the {@link CharacterClass} of a {@link HumanEntity} changes. The newly assigned can be null, and will be
+ * in case the {@code HumanEntity} has passed.
+ */
 public class ClassChangeEvent extends Event implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
     private final HumanEntity entity;
