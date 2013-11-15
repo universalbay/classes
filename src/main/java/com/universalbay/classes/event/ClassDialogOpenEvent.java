@@ -29,6 +29,12 @@ public class ClassDialogOpenEvent extends Event implements Cancellable {
         this.availableClasses = availableClasses;
     }
 
+    /**
+     * Gets the {@link List} of all {@link CharacterClass CharacterClasses} available to this {@link HumanEntity}. These
+     * are the options that the {@code HumanEntity} must choose between.
+     *
+     * @return  the {@code List} of {@code CharacterClass CharacterClasses} to display in the dialog
+     */
     public final List<CharacterClass> getAvailableClasses() {
         return this.availableClasses;
     }
