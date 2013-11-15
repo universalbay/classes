@@ -9,6 +9,9 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.Cancellable;
 import org.bukkit.entity.HumanEntity;
 
+/**
+ * Called when a {@link HumanEntity} picks a new class using the selection dialog.
+ */
 public class ClassDialogOpenEvent extends Event implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
     private final HumanEntity entity;
