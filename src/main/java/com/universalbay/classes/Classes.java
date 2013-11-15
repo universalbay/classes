@@ -40,7 +40,7 @@ public class Classes extends JavaPlugin implements Listener {
         this.getServer().getPluginManager().registerEvents(this, this); // TODO: Outsource eventlistener
 
         // Register the ClassManager as a service for other plugins to use and abuse
-        this.classManager = new ClassManager(this.getServer().getMaxPlayers());
+        this.classManager = new MemoryClassManager(this.getServer().getMaxPlayers());
         this.getServer().getServicesManager().register(ClassManager.class, this.classManager, this, ServicePriority.Normal);
 
         // Load the CharacterClasses from the config file
