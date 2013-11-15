@@ -18,6 +18,12 @@ public class ClassDialogOpenEvent extends Event implements Cancellable {
     private final List<CharacterClass> availableClasses;
     private boolean cancelled;
 
+    /**
+     * Constructs a {@code ClassDialogOpenEvent}.
+     *
+     * @param   entity              the {@link HumanEntity} who opened the dialog
+     * @param   availableClasses    the {@link List} of {@link CharacterClass CharacterClasses} to display in the dialog
+     */
     public ClassDialogOpenEvent(final HumanEntity entity, final List<CharacterClass> availableClasses) {
         this.entity = entity;
         this.availableClasses = availableClasses;
