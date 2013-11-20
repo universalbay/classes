@@ -16,6 +16,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -106,6 +107,16 @@ public class Classes extends JavaPlugin implements Listener {
 
     @EventHandler
     public final void onPlayerRespawn(final PlayerRespawnEvent event) {
+        event.getPlayer().getInventory().addItem(this.getConfig().getItemStack("classSelection.selectionWand"));
+    }
+
+    @EventHandler
+    public final void onPlayerJoin(final PlayerJoinEvent event) {
+        if (this.classManager.getAssignedClass(event.getPlayer()) != null) {
+            return;
+        } else if (event.getPlayer().getInventory().contains(this.getConfig().getItemStack("classSelection.selectionWand"))) {
+            return;
+        }
         event.getPlayer().getInventory().addItem(this.getConfig().getItemStack("classSelection.selectionWand"));
     }
 
